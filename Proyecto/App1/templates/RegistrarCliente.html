@@ -1,8 +1,6 @@
 <div>
     {% extends "Empty.html" %}
     {% load static %}
-
-
         {% block ContenidoCambia %}
             <p>Registrar Cliente</p>
             <form action="RegistrarCliente/" method="post"> {% csrf_token %}
@@ -50,15 +48,6 @@
                 <br>
                 <br> 
                 <input type="submit" value="Enviar">
-                
-                
-                
-
-
-               
-                
-
-                
                 
             </form>    
         {% endblock %}
