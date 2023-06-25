@@ -1,6 +1,8 @@
 from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render
+from App1.forms import *
+from App1.models import *
 
 # Create your views here.
 def inicio(request):
@@ -22,4 +24,8 @@ def Empty(request):
     return render(request, "Empty.html")
 
 def RegistrarCliente(request):
-    return render(request,"RegistrarCliente.html")
+    if request.method == "POST":
+        var_cliente= Clientes(request.POST["nombre"],request.POST["apellido"],request.POST["provincia"],request.POST["CUIT"],request.POST["email"])
+        var_cliente.save()
+        return render(request,"inicio.html")
+    return render(request, "RegistrarCliente.html")

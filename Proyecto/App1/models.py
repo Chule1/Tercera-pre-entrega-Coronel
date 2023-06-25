@@ -1,4 +1,5 @@
 from django.db import models
+
 PROVINCIAS_ARGENTINAS = (
     ('Buenos Aires', 'Buenos Aires'),
     ('C.A.B.A.', 'C.A.B.A.'),
