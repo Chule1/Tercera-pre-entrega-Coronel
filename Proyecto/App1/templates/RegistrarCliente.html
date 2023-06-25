@@ -3,7 +3,7 @@
     {% load static %}
         {% block ContenidoCambia %}
             <p>Registrar Cliente</p>
-            <form action="RegistrarCliente/" method="post"> {% csrf_token %}
+            <form action="" method="post"> {% csrf_token %}
                 
                 <input placeholder="Indique su nombre" type="Text" nombre="nombre" required>
                 <br>
@@ -40,7 +40,7 @@
                         <option value="Tucumán">
                         </datalist>
 
-                <input placeholder="Provincia" id="provincia" list="lista_provincias" name="provincias">
+                <input placeholder="Provincia" id="provincia" list="lista_provincias" name="provincia">
                 
                 <br>
                 <br> 
