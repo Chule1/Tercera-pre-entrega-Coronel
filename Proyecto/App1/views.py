@@ -28,4 +28,4 @@ def RegistrarCliente(request):
         var_cliente= Clientes(request.POST["nombre"],request.POST["apellido"],request.POST["provincia"],request.POST["CUIT"],request.POST["email"])
         var_cliente.save()
         return render(request,"inicio.html")
-    return render(request, "RegistrarCliente.html")
+    return render(request, "inicio.html")

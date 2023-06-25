@@ -5,7 +5,7 @@
 
         {% block ContenidoCambia %}
             <p>Registrar Cliente</p>
-            <form action="/Clientes/Registrar" method="post"> {% csrf_token %}
+            <form action="RegistrarCliente/" method="post"> {% csrf_token %}
                 
                 <input placeholder="Indique su nombre" type="Text" nombre="nombre" required>
                 <br>
