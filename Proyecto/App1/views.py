@@ -17,3 +17,6 @@ def Productos(request):
 
 def RecursosHumanos(request):
     return render(request, "RecursosHumanos.html")
+
+def Empty(request):
+    return render(request, "Empty.html")
