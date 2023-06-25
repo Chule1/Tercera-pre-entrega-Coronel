@@ -20,3 +20,6 @@ def RecursosHumanos(request):
 
 def Empty(request):
     return render(request, "Empty.html")
+
+def RegistrarCliente(request):
+    return render(request,"RegistrarCliente.html")
