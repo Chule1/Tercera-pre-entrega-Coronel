@@ -1,0 +1,20 @@
+<div>
+    {% extends "Empty.html" %}
+    {% load static %}
+        {% block ContenidoCambia %}
+            <p>Buscar vendedores por provincia</p>
+            <form action="/App1/aux_BuscarVendedor/" method="GET">
+                <input placeholder="provincia" type="text" name="provincia" id="provincia">
+                <input type="submit" value="Buscar">
+            </form>
+    
+            {% if vendedor %}
+                {% for vendedor in Vendedores %}
+                    <li> {{vendedor.nombre}} </li>
+                    <li> {{vendedor.apellido}} </li>
+                    <li> {{vendedor.email}} </li>
+                    <li> __________________</li>
+                {% endfor %}
+            {% endif %}
+        {% endblock %}    
+</div>

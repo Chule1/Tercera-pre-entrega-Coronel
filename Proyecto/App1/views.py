@@ -36,3 +36,24 @@ def RegistrarCliente(request):
     else: 
         miFormulario=form_RegistrarCliente()
     return render(request, "RegistrarCliente.html", {"miFormulario":miFormulario})
+
+def RegistrarVendedor(request):
+    return render(request, "RegistrarVendedor.html")
+
+def BuscarVendedor(request):
+    return render(request, "BuscarVendedor.html")
+
+def aux_BuscarVendedor(request):
+    if request.GET["provincia"]:
+        provincia=request.GET["provincia"]
+        vendedores = Vendedores.objects.filter(provincia=provincia)
+        return render(request, "BuscarVendedor.html", {"vendedores":vendedores})
+    else: 
+        respuesta = "No se enviaron datos"   
+    return HttpResponse(respuesta)
+
+def RegistrarProducto(request):
+    return render(request, "RegistrarProducto.html")
+
+def BuscarProducto(request):
+    return render(request, "BuscarProducto.html")
