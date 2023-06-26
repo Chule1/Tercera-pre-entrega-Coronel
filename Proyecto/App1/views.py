@@ -9,16 +9,16 @@ from django import forms
 def inicio(request):
     return render(request, "inicio.html")
 
-def Clientes(request):
+def clientes(request):
     return render(request, "Clientes.html")
 
-def Vendedores(request):
+def vendedores(request):
     return render(request, "Vendedores.html")
 
-def Productos(request):
+def productos(request):
     return render(request, "Productos.html")
 
-def RecursosHumanos(request):
+def recursosHumanos(request):
     return render(request, "RecursosHumanos.html")
 
 def Empty(request):
@@ -46,7 +46,7 @@ def BuscarVendedor(request):
 def aux_BuscarVendedor(request):
     if request.GET["provincia"]:
         provincia=request.GET["provincia"]
-        vendedores = Vendedores.objects.filter(provincia=provincia)
+        vendedores = Vendedores.objects.filter(provincia = provincia)
         return render(request, "BuscarVendedor.html", {"vendedores":vendedores})
     else: 
         respuesta = "No se enviaron datos"   

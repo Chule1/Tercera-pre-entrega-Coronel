@@ -3,11 +3,11 @@ from App1.views import *
 
 urlpatterns = [
     path('inicio/', inicio),
-    path('Clientes/', Clientes, name="Cursos"),
-    path('Vendedores/', Vendedores, name="Vendedores"),
-    path('Productos/', Productos, name="Productos"),
+    path('Clientes/', clientes, name="Cursos"),
+    path('Vendedores/', vendedores, name="Vendedores"),
+    path('Productos/', productos, name="Productos"),
     path('Empty/', Empty, name="Empty"),
-    path('RecursosHumanos/', RecursosHumanos, name="RecursosHumanos"),
+    path('RecursosHumanos/', recursosHumanos, name="RecursosHumanos"),
     path('RegistrarCliente/', RegistrarCliente, name="RegistrarCliente"),
     path('RegistrarVendedor/', RegistrarVendedor, name="RegistrarVendedor"),
     path('BuscarVendedor/', BuscarVendedor, name="BuscarVendedor"),
