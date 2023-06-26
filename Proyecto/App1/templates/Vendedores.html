@@ -2,6 +2,29 @@
     {% extends "Empty.html" %}
     {% load static %}
         {% block ContenidoCambia %}
-        <p>Vendedores</p>
+        
+        <div class="card text-white bg-secondary my-5 py-4 text-center">
+            <div class="card-body"><p class="text-white m-0"> <b>VENDEDORES</b> </p></div>
+        </div>
+        <!-- Content Row-->
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Registrate como Vendedor</h2>
+                        <p class="card-text">Se parte de nuestra familia, vendé los mejores productos</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="../RegistrarVendedor/">Registrate como vendedor</a></div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Buscar Vendedor</h2>
+                        <p class="card-text">Contamos con profesionales de la construccion que te brindaran sus recomendaciones para que tu proyecto sea de igual calidad que nuestros productos.</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="../BuscarVendedor/">Encuentra el vendedor más cercano</a></div>
+                </div>
+            </div>
         {% endblock %}
     </div>
