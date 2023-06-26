@@ -29,7 +29,7 @@ def RegistrarCliente(request):
         print(miFormulario)
         if miFormulario.is_valid:
             data = miFormulario.cleaned_data
-            cliente = Clientes(nombre=data["nombre"],apellido=data["apellido"],provincia=data["provincia"],cuit=data["CUIT"], email=data["email"])
+            cliente = Clientes(nombre=data["nombre"],apellido=data["apellido"],provincia=data["provincia"],CUIT=data["CUIT"],email=data["email"])
             cliente.save()
             return render(request,"inicio.html")    
     else: 

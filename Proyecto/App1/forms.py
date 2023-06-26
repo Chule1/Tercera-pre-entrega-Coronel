@@ -28,11 +28,11 @@ PROVINCIAS_ARGENTINAS = (
 )
 
 class form_RegistrarCliente(forms.Form):
-    nombre = forms.CharField(max_length=40)
-    apellido = forms.CharField(max_length=40)
-    provincia = forms.CharField(max_length=100, widget=forms.Select(choices=PROVINCIAS_ARGENTINAS),initial="Buenos Aires")
-    CUIT = forms.IntegerField()
-    email = forms.EmailField()
+    nombre=forms.CharField(max_length=40)
+    apellido=forms.CharField(max_length=40)
+    provincia=forms.CharField(max_length=100, widget=forms.Select(choices=PROVINCIAS_ARGENTINAS),initial="Buenos Aires")
+    CUIT=forms.IntegerField()
+    email=forms.EmailField()
 
 class form_RegistrarVendedor(forms.Form):
     nombre=forms.CharField(max_length=40)
