@@ -3,52 +3,13 @@
     {% load static %}
         {% block ContenidoCambia %}
             <p>Registrar Cliente</p>
-            <form action="" method="post"> {% csrf_token %}
-                
-                <input placeholder="Indique su nombre" type="Text" nombre="nombre" required>
-                <br>
-                <br>
-                <input placeholder="Indique su apellido" type="Text" apellido="apellido" required>
-                <br>
-                <br>
-                <label for="provincia"></label>
-                
-                <datalist id="lista_provincias"> 
-                        <option value="Buenos Aires">
-                        <option value="C.A.B.A.">
-                        <option value="Catamarca">
-                        <option value="Chaco">
-                        <option value="Chubut">
-                        <option value="Córdoba">
-                        <option value="Corrientes">
-                        <option value="Entre Ríos">
-                        <option value="Formosa">
-                        <option value="Jujuy">
-                        <option value="La Pampa">
-                        <option value="La Rioja">
-                        <option value="Mendoza">
-                        <option value="Misiones">
-                        <option value="Neuquén">
-                        <option value="Río Negro">
-                        <option value="Salta">
-                        <option value="San Juan">
-                        <option value="San Luis">
-                        <option value="Santa Cruz">
-                        <option value="Santa Fe">
-                        <option value="Santiago del Estero">
-                        <option value="Tierra del Fuego">
-                        <option value="Tucumán">
-                        </datalist>
-
-                <input placeholder="Provincia" id="provincia" list="lista_provincias" name="provincia">
-                
-                <br>
-                <br> 
-                <input placeholder="Indique su email" type="email" email="email" required>
-                <br>
-                <br> 
-                <input type="submit" value="Enviar">
-                
-            </form>    
+            <form action="/RegistrarCliente/" method="post"> {% csrf_token %}
+                <table>
+                    {{ miFormulario.as_table }}
+                </table>
+           
+                <input type = "submit" value="Enviar">
+            </form>
+             
         {% endblock %}
     </div>
