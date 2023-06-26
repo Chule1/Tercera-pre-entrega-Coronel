@@ -29,11 +29,11 @@ PROVINCIAS_ARGENTINAS = (
 
 # Create your models here.
 class Clientes(models.Model):
-    nombre=models.CharField(max_length=40)
-    apellido=models.CharField(max_length=40)
-    provincia=models.CharField(max_length=100, choices=PROVINCIAS_ARGENTINAS,default="Buenos Aires")
-    CUIT=models.IntegerField()
-    email=models.EmailField()
+    nombre = models.CharField(max_length=40)
+    apellido = models.CharField(max_length=40)
+    provincia = models.CharField(max_length=100, choices=PROVINCIAS_ARGENTINAS,default="Buenos Aires")
+    CUIT = models.IntegerField()
+    email = models.EmailField()
 
 class Vendedores(models.Model):
     nombre=models.CharField(max_length=40)

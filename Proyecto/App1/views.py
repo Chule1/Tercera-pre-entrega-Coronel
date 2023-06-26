@@ -25,19 +25,13 @@ def Empty(request):
 
 def RegistrarCliente(request):
     if request.method == 'POST':
-        miFormulario=form_RegistrarCliente(request.POST)
+        miFormulario= form_RegistrarCliente(request.POST)
         print(miFormulario)
         if miFormulario.is_valid:
             data = miFormulario.cleaned_data
-            var_cliente= Clientes(nombre=data["nombre"],apellido=data["apellido"],provincia=data["provincia"],cuit=data["CUIT"], email=data["email"])
-            var_cliente.save()
-            return render(request,"inicio.html") 
-        
-    else: miFormulario = form_RegistrarCliente()   #aca es donde me tira error como si faltara el request
+            cliente = Clientes(nombre=data["nombre"],apellido=data["apellido"],provincia=data["provincia"],cuit=data["CUIT"], email=data["email"])
+            cliente.save()
+            return render(request,"inicio.html")    
+    else: 
+        miFormulario = form_RegistrarCliente()
     return render(request, "RegistrarCliente.html", {"miFormulario":miFormulario})
-
-# """if request.method == 'POST':
-#        estudiante = Estudiante(nombre=request.POST["nombre"],apellido=request.POST["apellido"], email=request.POST["email"])
-#        estudiante.save()
-#        return render(request,"AppCoder/inicio.html")
-#    return render(request, "AppCoder/setEstudiantes.html")"""
