@@ -3,7 +3,7 @@
     {% load static %}
         {% block ContenidoCambia %}
             <p>Registrar Cliente</p>
-            <form action="/RegistrarCliente/" method="post"> {% csrf_token %}
+            <form action="RegistrarCliente.html" method="post"> {% csrf_token %}
                 <table>
                     {{ miFormulario.as_table }}
                 </table>
