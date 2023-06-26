@@ -1,0 +1,15 @@
+<div>
+    {% extends "Empty.html" %}
+    {% load static %}
+        {% block ContenidoCambia %}
+            <p>Mandanos tus datos si queres trabajar con nosotros</p>
+            <form action="/App1/RegistrarCandidato/" method="POST"> {% csrf_token %}
+                <table>
+                    {{ miFormulario.as_table }}
+                </table>
+           
+                <input type = "submit" value="Enviar">
+            </form>
+             
+        {% endblock %}
+    </div>

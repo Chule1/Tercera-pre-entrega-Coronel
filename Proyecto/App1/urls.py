@@ -14,4 +14,7 @@ urlpatterns = [
     path('aux_BuscarVendedor/', aux_BuscarVendedor, name="aux_BuscarVendedor"),
     path('RegistrarProducto/', RegistrarProducto, name="RegistrarProducto"),
     path('BuscarProducto/', BuscarProducto, name="BuscarProducto"),
+    path('aux_BuscarProducto/', aux_BuscarProducto, name="aux_BuscarProducto"),
+    path('RegistrarCandidato/', RegistrarCandidato, name="RegistrarCandidato"),
+
 ]

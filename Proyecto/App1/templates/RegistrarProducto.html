@@ -1,0 +1,15 @@
+<div>
+    {% extends "Empty.html" %}
+    {% load static %}
+        {% block ContenidoCambia %}
+            <p>Registrar nuevo producto disponible</p>
+            <form action="/App1/RegistrarProducto/" method="POST"> {% csrf_token %}
+                <table>
+                    {{ miFormulario.as_table }}
+                </table>
+           
+                <input type = "submit" value="Enviar">
+            </form>
+             
+        {% endblock %}
+    </div>

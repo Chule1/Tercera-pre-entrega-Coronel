@@ -40,18 +40,18 @@ class form_RegistrarVendedor(forms.Form):
     provincia=forms.CharField(max_length=100, widget=forms.Select(choices=PROVINCIAS_ARGENTINAS),initial="Buenos Aires")
     CUIT=forms.IntegerField()
     email=forms.EmailField()
+    comision_porc=forms.IntegerField()
 
 class form_RegistrarProducto(forms.Form):
     descripcion=forms.CharField(max_length=40)
     unidad=forms.CharField(max_length=5)  #kg,m,bolsa,caja,etc
     precio_unit=forms.FloatField()
     stock=forms.FloatField()
-    exento=forms.BooleanField()  #Si el producto tiene eximición impositiva o no. 21 vs 10,5.
 
 class form_RegistrarCandidato(forms.Form):
     nombre=forms.CharField(max_length=40)
     apellido=forms.CharField(max_length=40)
     CUIT=forms.IntegerField()
     email=forms.EmailField()
-    descripcion=forms.CharField(max_length=100)
-    CV=forms.FileField()
+    provincia=forms.CharField(max_length=100, widget=forms.Select(choices=PROVINCIAS_ARGENTINAS),initial="Buenos Aires")
+    CV=forms.FileField(required=False)

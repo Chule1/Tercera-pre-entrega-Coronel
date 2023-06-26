@@ -1,0 +1,21 @@
+<div>
+    {% extends "Empty.html" %}
+    {% load static %}
+        {% block ContenidoCambia %}
+            <p>Buscar producto por descripción</p>
+            <form action="/App1/aux_BuscarProducto/" method="GET">
+                <input placeholder="Descripcion" type="text" name="descripcion" id="descripcion">
+                <input type="submit" value="Buscar">
+            </form>
+    
+            {% if productos %}
+                {% for producto in productos %}
+                    <li> Descripcion: {{producto.descripcion}} </li>
+                    <li> Unidad: {{producto.unidad}} </li>
+                    <li> Precio Unitario: {{producto.precio_unit}} </li>
+                    <li> Stock disponible: {{producto.stock}} </li>
+                    <li> __________________</li>
+                {% endfor %}
+            {% endif %}
+        {% endblock %}    
+</div>
