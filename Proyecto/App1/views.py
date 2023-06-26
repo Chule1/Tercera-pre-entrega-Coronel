@@ -3,6 +3,7 @@ from django.template import loader
 from django.shortcuts import render
 from App1.forms import *
 from App1.models import *
+from django import forms
 
 # Create your views here.
 def inicio(request):
@@ -24,14 +25,14 @@ def Empty(request):
     return render(request, "Empty.html")
 
 def RegistrarCliente(request):
-    if request.method == 'POST':
-        miFormulario= form_RegistrarCliente(request.POST)
+    if request.method=='POST':
+        miFormulario=form_RegistrarCliente(request.POST)
         print(miFormulario)
-        if miFormulario.is_valid:
-            data = miFormulario.cleaned_data
-            cliente = Clientes(nombre=data["nombre"],apellido=data["apellido"],provincia=data["provincia"],CUIT=data["CUIT"],email=data["email"])
+        if miFormulario.is_valid():
+            data=miFormulario.cleaned_data
+            cliente=Clientes(nombre=data["nombre"],apellido=data["apellido"],provincia=data["provincia"],CUIT=data["CUIT"],email=data["email"])
             cliente.save()
             return render(request,"inicio.html")    
     else: 
-        miFormulario = form_RegistrarCliente()
+        miFormulario=form_RegistrarCliente()
     return render(request, "RegistrarCliente.html", {"miFormulario":miFormulario})
